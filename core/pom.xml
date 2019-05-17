@@ -16,5 +16,8 @@
     <name>system</name>
     <description>Java 系统的核心模块</description>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>
