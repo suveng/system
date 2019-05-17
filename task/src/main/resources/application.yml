@@ -1,0 +1,9 @@
+server:
+  port: 9200
+  servlet:
+    context-path: /sys/task
+spring:
+  application:
+    name: task
+  profiles:
+    active: dev

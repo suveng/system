@@ -1,0 +1,9 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /sys/console
+spring:
+  application:
+    name: console
+  profiles:
+    active: dev
