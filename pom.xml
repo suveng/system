@@ -12,6 +12,7 @@
         <module>task</module>
         <module>console</module>
         <module>api</module>
+        <module>monitor</module>
     </modules>
     <packaging>pom</packaging>
 
