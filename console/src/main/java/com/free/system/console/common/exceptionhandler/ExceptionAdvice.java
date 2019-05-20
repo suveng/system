@@ -19,8 +19,19 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  **/
 @ControllerAdvice
 public class ExceptionAdvice {
+    /** Field logger  */
     private Logger logger = LogbackFactory.SYSTEM_LOGGER;
 
+    /**
+     * 方法:  handleIndexOutOfBoundsException
+     *
+     * @author suwenguang@52tt.com
+     * @date 2019/5/20
+     *
+     *
+     * @param e (类型:Exception )
+     * @return Result
+     */
     @ExceptionHandler({Exception.class})
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody

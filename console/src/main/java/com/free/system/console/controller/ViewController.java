@@ -15,7 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class ViewController {
+    /** Field logger  */
     private Logger logger = LogbackFactory.SYSTEM_LOGGER;
+    /**
+     * getter: get404 方法返回   ViewController 的 404 字段
+     *
+     *
+     *
+     * @return 404 (类型: String)
+     */
     @RequestMapping("/404")
     public String get404(){
         logger.info("404");

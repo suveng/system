@@ -19,6 +19,13 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
  **/
 public class MpGenerator {
 
+    /**
+     * 方法:  main
+     * @author suwenguang@52tt.com
+     * @date 2019/5/20
+     *
+     * @param args (类型:String[] )
+     */
     public static void main(String[] args) {
 //        assert (false) : "代码生成属于危险操作，请确定配置后取消断言执行代码生成！";
         AutoGenerator mpg = new AutoGenerator();
@@ -27,8 +34,8 @@ public class MpGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setAuthor("suveng");
-        gc.setOutputDir("F:/Mproject/springboot/src/main/java");
+        gc.setAuthor("suveng@163.com");
+        gc.setOutputDir("F:\\Mproject\\system\\core\\src\\main\\java");
         gc.setFileOverride(false);// 是否覆盖同名文件，默认是false
         gc.setActiveRecord(true);// 不需要ActiveRecord特性的请改为false
         gc.setEnableCache(false);// XML 二级缓存
@@ -57,15 +64,15 @@ public class MpGenerator {
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");
-        dsc.setUrl("jdbc:mysql://localhost:3306/bike?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC");
+        dsc.setUrl("jdbc:mysql://localhost:3306/system?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC");
         mpg.setDataSource(dsc);
 
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         // strategy.setCapitalMode(true);// 全局大写命名 ORACLE 注意
 //        strategy.setTablePrefix(new String[]{"user_"});// 此处可以修改为您的表前缀
-        strategy.setNaming(NamingStrategy.nochange);// 表名生成策略
-        strategy.setInclude(new String[]{"identification"}); // 需要生成的表
+        strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
+        strategy.setInclude(new String[]{"user"}); // 需要生成的表
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         // 自定义实体父类
         // strategy.setSuperEntityClass("com.baomidou.demo.TestEntity");
@@ -89,7 +96,7 @@ public class MpGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("my.suveng.server.modules.user");
+        pc.setParent("com.free.system.core.modules.user");
         // pc.setModuleName("test");
         mpg.setPackageInfo(pc);
 
