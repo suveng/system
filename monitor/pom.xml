@@ -12,6 +12,10 @@
     <artifactId>sys-monitor</artifactId>
     <description>Java 系统的监控模块</description>
 
+    <properties>
+        <docker.image.prefix>suveng</docker.image.prefix>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

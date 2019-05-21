@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <docker.image.prefix>springboot</docker.image.prefix>
+        <docker.image.prefix>suveng</docker.image.prefix>
     </properties>
 
     <artifactId>sys-console</artifactId>

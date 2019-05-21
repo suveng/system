@@ -16,6 +16,10 @@
     <name>system</name>
     <description>Java 系统的对外api模块</description>
 
+    <properties>
+        <docker.image.prefix>suveng</docker.image.prefix>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
