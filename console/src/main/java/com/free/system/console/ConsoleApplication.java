@@ -12,7 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ConsoleApplication {
     public static void main(String[] args) {
-        System.out.println("hello");
+        System.out.println("hello,la");
         SpringApplication.run(ConsoleApplication.class, args);
     }
 }
