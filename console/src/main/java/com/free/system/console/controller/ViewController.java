@@ -57,4 +57,9 @@ public class ViewController {
         logger.info("用户访问了 /welcome");
         return "welcome";
     }
+
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
+    }
 }
