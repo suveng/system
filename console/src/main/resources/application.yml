@@ -25,3 +25,5 @@ spring:
     settings: {"date_format":"yyyy-MM-dd","datetime_format":"yyyy-MM-dd HH:mm:ss"}
     #    view-names:
     suffix: .ftl
+  aop:
+    auto: true

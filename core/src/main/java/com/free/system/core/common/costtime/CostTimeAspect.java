@@ -1,7 +1,7 @@
-package com.free.system.core.common.aspect.costtime;
+package com.free.system.core.common.costtime;
 
 
-import com.free.system.core.common.aspect.costtime.usage.CostTime;
+import com.free.system.core.common.costtime.usage.CostTime;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

@@ -1,4 +1,4 @@
-package com.free.system.monitor;
+package com.free.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0.0
  **/
 @SpringBootApplication
-public class MonitorApplication {
+public class ApiApplication {
     public static void main(String[] args) {
-        SpringApplication.run(MonitorApplication.class, args);
+        SpringApplication.run(ApiApplication.class, args);
     }
 }

@@ -1,4 +1,4 @@
-package com.free.system.console;
+package com.free.system;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,9 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0.0
  **/
 @SpringBootApplication
-public class ConsoleApplication {
+public class TaskApplication {
     public static void main(String[] args) {
-        System.out.println("hello,laa");
-        SpringApplication.run(ConsoleApplication.class, args);
+        SpringApplication.run(TaskApplication.class, args);
     }
 }

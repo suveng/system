@@ -1,4 +1,4 @@
-package com.free.system.core.common.aspect.costtime.usage;
+package com.free.system.core.common.costtime.usage;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

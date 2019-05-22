@@ -1,11 +1,11 @@
 package com.free.system.console.controller;
 
+
+import com.free.system.core.common.costtime.usage.CostTime;
 import com.free.system.core.common.logback.LogbackFactory;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
 
 /**
  * description:
@@ -26,6 +26,7 @@ public class ViewController {
      * @return String
      */
     @RequestMapping("/404")
+    @CostTime
     public String re404(){
         logger.info("404");
         return "public/error/404.html";
@@ -38,6 +39,7 @@ public class ViewController {
      * @return String
      */
     @RequestMapping("/index")
+    @CostTime
     public String index(){
         logger.info("用户访问了 /index");
         return "index";
@@ -50,7 +52,8 @@ public class ViewController {
      * @return String
      */
     @RequestMapping("/welcome.html")
-    public String welcom(){
+    @CostTime
+    public String welcome(){
         logger.info("用户访问了 /welcome");
         return "welcome";
     }
