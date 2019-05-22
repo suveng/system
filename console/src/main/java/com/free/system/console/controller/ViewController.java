@@ -58,6 +58,12 @@ public class ViewController {
         return "welcome";
     }
 
+    /**
+     * 方法:  login:返回登录页面
+     * @author suwenguang
+     * @date 2019/5/22
+     * @return String
+     */
     @RequestMapping("/login")
     public String login(){
         return "login";
