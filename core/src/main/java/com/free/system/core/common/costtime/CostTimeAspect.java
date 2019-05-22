@@ -2,6 +2,7 @@ package com.free.system.core.common.costtime;
 
 
 import com.free.system.core.common.costtime.usage.CostTime;
+import com.free.system.core.common.logback.LogbackFactory;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,7 +20,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class CostTimeAspect {
-    private static final Logger log = LoggerFactory.getLogger(CostTimeAspect.class);
+    private static final Logger log = LogbackFactory.COSTTIME;
     @Pointcut(value = "execution(* *..*.*.*(..)) ")
     public void anyMethod() {
     }
