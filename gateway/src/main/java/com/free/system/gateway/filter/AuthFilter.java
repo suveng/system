@@ -1,4 +1,4 @@
-package com.free.system.console.common.filter;
+package com.free.system.gateway.filter;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
