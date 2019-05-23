@@ -119,15 +119,15 @@
         </encoder>
     </appender>
 
-    <logger name="systemLogger" level="INFO" additivity="false">
-        <appender-ref ref="systemLogger"/>
-    </logger>
+<!--    <logger name="systemLogger" level="INFO" additivity="false">-->
+<!--        <appender-ref ref="systemLogger"/>-->
+<!--    </logger>-->
 
-    <logger name="costTime" level="INFO" additivity="false">
-        <appender-ref ref="costTime"/>
-    </logger>
+<!--    <logger name="costTime" level="INFO" additivity="false">-->
+<!--        <appender-ref ref="costTime"/>-->
+<!--    </logger>-->
 
-    <root level="INFO">
+    <root level="debug">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="WarnDown"/>
         <appender-ref ref="ErrorUp"/>

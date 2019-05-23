@@ -6,8 +6,6 @@ import com.free.system.core.common.response.Result;
 import com.free.system.core.common.response.ResultBuilder;
 import com.free.system.core.common.response.ResultEnums;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    /** Field logger  */
     private static final Logger logger = LogbackFactory.SYSTEM_LOGGER;
     /**
      * 方法:  login
