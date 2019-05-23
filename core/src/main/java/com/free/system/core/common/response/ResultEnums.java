@@ -10,25 +10,29 @@ public enum ResultEnums {
     /**
      * 请求成功
      */
-    SIMPLE_SUCCESS(20000, "请求成功"),
+    SIMPLE_SUCCESS(2000, "请求成功"),
 
     /**
      * 未知错误
      **/
-    UNKNOWN_ERROR(100000, "未知错误"),
+    UNKNOWN_ERROR(5000, "未知错误"),
 
     /**
      * 请求失败
      **/
-    SIMPLE_ERROR(100001, "请求失败"),
+    SIMPLE_ERROR(500001, "请求失败"),
     /**
      * 参数错误
      */
-    ILLEGAL_ARGUMENT_ERROR(100002, "参数错误"),
+    ILLEGAL_ARGUMENT_ERROR(500002, "参数错误"),
     /**
      * 返回结果有误
      */
-    ILLEGAL_RESULT_ERROR(100003, "返回结果有误"),
+    ILLEGAL_RESULT_ERROR(500003, "返回结果有误"),
+    /**
+     * 数据库错误
+     */
+    SQL_ERROR(500004, "数据库错误"),
     ;
     /**
      * 系统状态码

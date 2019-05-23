@@ -27,3 +27,7 @@ spring:
     suffix: .ftl
   aop:
     auto: true
+#mybatis-plus
+mybatis-plus:
+  mapper-locations: classpath:com/free/system/core/modules/*/mapper/xml/*.xml
+  type-aliases-package: com.free.system.core.modules.*.entity

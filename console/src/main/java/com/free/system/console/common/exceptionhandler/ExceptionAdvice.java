@@ -4,12 +4,16 @@ package com.free.system.console.common.exceptionhandler;
 import com.free.system.core.common.logback.LogbackFactory;
 import com.free.system.core.common.response.Result;
 import com.free.system.core.common.response.ResultBuilder;
+import com.free.system.core.common.response.ResultEnums;
 import org.slf4j.Logger;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import java.sql.SQLException;
 
 /**
  * @author suwenguang
@@ -21,6 +25,22 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ExceptionAdvice {
     /** Field logger  */
     private Logger logger = LogbackFactory.SYSTEM_LOGGER;
+
+    /**
+     * 方法:  handleSQLException
+     * @author suwenguang
+     * @date 2019/5/23
+     *
+     * @param e (类型:Exception )
+     * @return Result
+     */
+    @ExceptionHandler({DataAccessException.class})
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public Result handleSQLException(SQLException e) {
+        logger.error("数据库SQL异常", e);
+        return new Result(ResultEnums.SQL_ERROR.getCode(), "数据库SQL异常:" + e.getMessage(), null);
+    }
 
     /**
      * 方法:  handleIndexOutOfBoundsException
@@ -35,8 +55,10 @@ public class ExceptionAdvice {
     @ExceptionHandler({Exception.class})
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
-    public Result handleIndexOutOfBoundsException(Exception e) {
+    public Result handleException(Exception e) {
         logger.error("系统发生异常", e);
-        return ResultBuilder.buildUnknownResult();
+        return new Result(ResultEnums.UNKNOWN_ERROR.getCode(), "系统发生异常:" + e.getMessage(), null);
     }
+
+
 }
