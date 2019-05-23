@@ -22,11 +22,11 @@ public class AuthFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        if ("/sys/console/login".equals(httpServletRequest.getRequestURI()) || httpServletRequest.getRequestURI().contains("/sys/console/static")) {
+        if (httpServletRequest.getRequestURI().contains("login") || httpServletRequest.getRequestURI().contains("/sys/console/static")) {
             filterChain.doFilter(httpServletRequest, httpServletResponse);
             return;
         }
-        Object token = httpServletRequest.getAttribute("token");
+        Object token = httpServletRequest.getSession().getAttribute("token");
         if (ObjectUtils.isEmpty(token)) {
             String s = httpServletRequest.getContextPath() + "/login";
             httpServletResponse.sendRedirect(s);
